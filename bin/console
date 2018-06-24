@@ -3,4 +3,8 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-echo 'Console app!' . PHP_EOL;
+use App\Repository\ProductsRepository;
+
+$repo = new ProductsRepository();
+$repo->getAll();
+$repo->count([]);
