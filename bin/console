@@ -10,4 +10,14 @@ $repo->getAll();
 $repo->count([]);
 
 $res = $repo->getProductForSale(['limit' => 60]);
-var_dump($res);
+\var_dump($res);
+
+$collection = $repo->getProductionCollection();
+\var_dump($collection[1]);
+//$collection[2] = 'Photo shop';
+//\var_dump($collection[2]);
+
+$someClass = new class {
+    public $firstName;
+};
+\var_dump($someClass);
