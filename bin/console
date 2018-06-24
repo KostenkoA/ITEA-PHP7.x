@@ -8,3 +8,6 @@ use App\Repository\ProductsRepository;
 $repo = new ProductsRepository();
 $repo->getAll();
 $repo->count([]);
+
+$res = $repo->getProductForSale(['limit' => 60]);
+var_dump($res);
