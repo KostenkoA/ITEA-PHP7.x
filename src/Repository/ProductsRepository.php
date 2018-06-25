@@ -7,7 +7,8 @@ use App\Models\{
     Product,
     ProductCategory
 };
-//use iterable;
+use App\Service\Logger;
+use Psr\Log\LoggerInterface;
 
 class ProductsRepository
 {
@@ -18,6 +19,12 @@ class ProductsRepository
         'WEBStorm',
         'Visual Studio'
     ];
+    private $logger;
+
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
 
     public function getAll(): array
     {
@@ -33,6 +40,13 @@ class ProductsRepository
 //        }
 
         $limit = $filter['limit'] ?? self::DEFAULT_LIMIT;
+        $logger = ;
+
+        try {
+            //some logic
+        } catch (\RuntimeException | \LogicException $e){
+            $this->logger->error($e->getMessage());
+        }
 
         return $limit;
     }
