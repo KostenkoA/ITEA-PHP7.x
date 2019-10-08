@@ -26,19 +26,21 @@ class ProductsRepository
         $this->logger = $logger;
     }
 
+    /**
+     * @return array
+     */
     public function getAll(): array
     {
         return [];
     }
 
+    /**
+     * @param iterable $filter
+     *
+     * @return int|mixed
+     */
     public function getProductForSale(iterable $filter)
     {
-//        $limit = null;
-//
-//        if (isset($filter['limit'])){
-//            $limit = $filter['limit'];
-//        }
-
         $limit = $filter['limit'] ?? self::DEFAULT_LIMIT;
         $logger = '';
 
@@ -50,7 +52,12 @@ class ProductsRepository
 
         return $limit;
     }
-    
+
+    /**
+     * @param array|null $filters
+     *
+     * @return int|null
+     */
     public function count(?array $filters): ?int
     {
         return 0;
