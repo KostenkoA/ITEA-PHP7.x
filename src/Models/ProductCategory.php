@@ -9,6 +9,7 @@ class ProductCategory
 {
     /**
      * @var integer
+     * test annotation
      */
     private $id;
 
