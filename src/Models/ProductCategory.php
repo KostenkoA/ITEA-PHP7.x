@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+/** 
+* test annotation
+*/
 class ProductCategory
 {
     /**
