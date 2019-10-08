@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+/** 
+* test annotation
+*/
 class ProductCategory
 {
     /**
      * @var integer
+     * test annotation
      */
     private $id;
 
