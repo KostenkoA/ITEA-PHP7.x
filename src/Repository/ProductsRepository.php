@@ -40,7 +40,7 @@ class ProductsRepository
 //        }
 
         $limit = $filter['limit'] ?? self::DEFAULT_LIMIT;
-        $logger = ;
+        $logger = '';
 
         try {
             //some logic
